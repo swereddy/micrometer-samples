@@ -23,6 +23,7 @@ gradleEnterprise {
 include 'acceptance-tests'
 include 'baggage-producer'
 include 'baggage-consumer'
+include 'baggage-consumer-reactive'
 include 'batch'
 include 'bus'
 include 'cassandra'

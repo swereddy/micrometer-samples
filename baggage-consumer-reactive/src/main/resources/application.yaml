@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: baggage-consumer
+    name: baggage-consumer-reactive
 
 management:
   tracing:

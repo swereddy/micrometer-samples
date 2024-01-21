@@ -15,7 +15,7 @@ apply plugin: 'org.springframework.boot'
 dependencies {
 	implementation platform("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
 
-	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'com.github.tomakehurst:wiremock-jre8-standalone:latest.release'
 	implementation 'io.micrometer:micrometer-registry-prometheus'
@@ -25,8 +25,8 @@ dependencies {
 		implementation 'io.micrometer:micrometer-tracing-reporter-wavefront'
 	}
 //	if (project.hasProperty('otel')) {
-		implementation 'io.micrometer:micrometer-tracing-bridge-otel'
-//		implementation 'io.opentelemetry:opentelemetry-exporter-zipkin'
+		implementation 'io.micrometer:micrometer-tracing-bridge-otel:1.2.2'
+		implementation 'io.opentelemetry:opentelemetry-exporter-zipkin'
 //	}
 //	else {
 //		implementation 'io.micrometer:micrometer-tracing-bridge-brave'
